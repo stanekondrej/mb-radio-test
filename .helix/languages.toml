@@ -1,0 +1,6 @@
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config]
+cargo.target = "thumbv6m-none-eabi"
+check.allTargets = false

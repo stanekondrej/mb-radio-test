@@ -1,0 +1,29 @@
+[package]
+name = "mb-radio-test"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "radio"
+path = "src/lib.rs"
+
+[[bin]]
+name = "client"
+path = "src/bin/client/main.rs"
+test = false
+
+[[bin]]
+name = "server"
+path = "src/bin/server/main.rs"
+test = false
+
+[dependencies]
+cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
+cortex-m-rt = "0.7.5"
+defmt = "1.0.1"
+defmt-rtt = "1.0.0"
+embedded-hal = "1.0.0"
+microbit = { path = "../microbit/microbit" }
+#microbit = "0.15.1"
+nrf51-hal = "0.18.0"
+panic-halt = "1.0.0"
